@@ -39,7 +39,7 @@ nav {
 .nav {
     list-style: none;
     display: flex;
-    font-size: 5px;
+    font-size: 30px;
     gap: 30px;
     font-weight: bolder;
     justify-content: space-around;
@@ -65,9 +65,9 @@ nav {
 }
 
 button {
-    height: 30px;
-    width: 60px;
     border-radius: 16px;
+    width: fit-content;
+    height: fit-content;
 }
 
 main{
@@ -76,4 +76,7 @@ main{
 
 footer{
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
 }
