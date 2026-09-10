@@ -1,82 +1,97 @@
-:root{
-    --background-color: #d7d9ce;
-    --font-color: #313952;
-    --nav-color: #1b9aaa;
-    --button-color: #79babc;
-    --placeholder-color: #a8cac5;
+:root {
+  --background-color: #d7d9ce;
+  --font-color: #313952;
+  --nav-color: #1b9aaa;
+  --button-color: #79babc;
+  --placeholder-color: #a8cac5;
 }
 
 body {
-    margin: 0;
-    background-color: var(--background-color);
-    min-height: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+  min-height: 100%;
+  margin-bottom: 0;
 }
 
 .container {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 100% ;
-    grid-template-rows: 100px 30px auto 30px;
-    grid-template-areas:
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 40px auto 25px;
+  grid-template-areas:
     "header"
     "nav"
     "main"
-    "footer"
+    "footer";
 }
 
-
-header{
-    grid-area: header;
+header {
+  grid-area: header;
 }
 
 nav {
-    background-color: var(--nav-color);
-    color: var(--font-color);
-    grid-area: nav;
-
+  background-color: var(--nav-color);
+  grid-area: nav;
+  border: 1px solid black;
+  padding: 0;
 }
 
 .nav {
-    list-style: none;
-    display: flex;
-    font-size: 30px;
-    gap: 30px;
-    font-weight: bolder;
-    justify-content: space-around;
+  list-style: none;
+  display: flex;
+  font-size: 30px;
+  gap: 30px;
+  font-weight: bolder;
+  justify-content: space-around;
+  padding: 0;
+  align-items: center;
 }
 
-.card  {
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba (0, 0, 0, 0.1);
-    border: 1px solid black;
-    height: fit-content;
-    width: fit-content;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: 10px;
-    gap: 30px;
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 8px 4px 0px rgba (0, 0, 0, 0.1);
+  border: 1px solid black;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  gap: 30px;
 }
 
 .card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px;
 }
 
 button {
-    border-radius: 16px;
-    width: fit-content;
-    height: fit-content;
+  border-radius: 16px;
+  width: fit-content;
+  height: fit-content;
 }
 
-main{
-    grid-area: main;
+main {
+  grid-area: main;
 }
 
-footer{
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: var(--nav-color);
+  font-size: 20px;
+  font-weight: bold;
 }
