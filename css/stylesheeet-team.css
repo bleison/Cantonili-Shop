@@ -15,6 +15,7 @@ body {
 
 .container {
   display: grid;
+  align-items: center;
   grid-template-columns: 100%;
   grid-template-rows: 100px 40px auto 25px;
   grid-template-areas:
@@ -23,7 +24,6 @@ body {
     "main"
     "footer";
   min-height: 100vh;
-  row-gap: 30px;
 }
 
 header {
@@ -40,7 +40,7 @@ nav {
 .nav {
   list-style: none;
   display: flex;
-  font-size: 150%;
+  font-size: 30px;
   font-weight: bolder;
   justify-content: space-around;
   padding: 0;
@@ -52,19 +52,14 @@ a {
   color: var(--font-color);
 }
 
-.card-product1,
-.card-product2,
-.card-product3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card-team1,
+.card-team2,
+.card-team3 {
   border-radius: 8px;
   box-shadow: 8px 4px 0px rgba (0, 0, 0, 0.1);
   border: 1px solid black;
   text-align: center;
   box-sizing: border-box;
-  height: fit-content;
 }
 
 .card-grid {
@@ -74,33 +69,6 @@ a {
   grid-template-areas:
     "left-product center-product center-product right-product"
     "left-blanc center-product center-product right-blanc";
-}
-
-.card-product1 {
-  grid-area: left-product;
-  transform: translateY(50%);
-}
-
-.card-product2 {
-  grid-area: center-product;
-  transform: translateY(10%);
-}
-
-.card-product3 {
-  grid-area: right-product;
-  transform: translateY(50%);
-}
-
-.cap {
-  width: 70%;
-}
-
-.pullover {
-  width: 70%;
-}
-
-.t-shirt {
-  width: 70%;
 }
 
 button {
@@ -126,30 +94,16 @@ footer {
   font-weight: bold;
 }
 
-@media (max-width: 440px) {
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
- "first-product"
- "second-product"
- "third-product";
- row-gap: 30px;
+.card-team1 {
+  grid-area: left-product;
+  transform: translateY(50%);
 }
 
-.card-product1 {
-  grid-area: first-product;
-  transform: translateY(0%);
+.card-team2 {
+  grid-area: center-product;
 }
 
-.card-product2 {
-  grid-area: second-product;
-  transform: translateY(0%);
-}
-
-.card-product3 {
-  grid-area: third-product;
-  transform: translateY(0%);
-}
+.card-team3 {
+  grid-area: right-product;
+  transform: translateY(50%);
 }
