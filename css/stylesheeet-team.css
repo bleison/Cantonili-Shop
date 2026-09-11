@@ -9,7 +9,7 @@
 body {
   margin: 0;
   background-color: var(--background-color);
-  min-height: 100vh;
+  min-height: 100%;
   margin-bottom: 0;
 }
 
@@ -66,6 +66,7 @@ a {
   box-sizing: border-box;
   height: fit-content;
   background-color: #d7dacc;
+  transition: transform 0.3s ease;
 }
 
 .card-grid {
@@ -89,7 +90,7 @@ a {
   grid-area: right-product;
 }
 
-.djördji {
+.djoerdji {
   width: 70%;
   border-radius: 360px;
 }
@@ -164,7 +165,7 @@ footer {
 .card-team2:hover,
 .card-team3:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
+   transform: scale(1.05);
 }
 
 p {
