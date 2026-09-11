@@ -1,7 +1,7 @@
 :root {
   --background-color: #d7d9ce;
   --font-color: #313952;
-  --nav-color: #1b9aaa;
+  --nav-color: #0be3ff;
   --button-color: #79babc;
   --placeholder-color: #a8cac5;
 }
@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-  min-height: 100vh;
   display: grid;
+  align-items: center;
   grid-template-columns: 100%;
   grid-template-rows: 100px 40px auto 25px;
   grid-template-areas:
@@ -40,7 +40,6 @@ nav {
   list-style: none;
   display: flex;
   font-size: 30px;
-  gap: 30px;
   font-weight: bolder;
   justify-content: space-around;
   padding: 0;
@@ -52,25 +51,23 @@ a {
   color: var(--font-color);
 }
 
-.card {
+.card-product1,
+.card-product2,
+.card-product3 {
   border-radius: 8px;
   box-shadow: 8px 4px 0px rgba (0, 0, 0, 0.1);
   border: 1px solid black;
-  height: fit-content;
-  width: fit-content;
   text-align: center;
   box-sizing: border-box;
-  padding: 10px;
-  margin: 10px;
-  gap: 30px;
 }
 
 .card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "left-product center-product center-product right-product"
+    "left-blanc center-product center-product right-blanc";
 }
 
 button {
@@ -96,23 +93,28 @@ footer {
   font-weight: bold;
 }
 
-.card.product1 {
-  width: 20%;
-  height: 60%;
-  justify-content: center;
-  align-items: center;
+.card-product1 {
+  grid-area: left-product;
+  transform: translateY(50%);
 }
 
-.card.product3 {
-  width: 30%;
+.card-product2 {
+  grid-area: center-product;
+}
+
+.card-product3 {
+  grid-area: right-product;
+  transform: translateY(50%);
 }
 
 .cap {
-  width: 30%;
-  height: 60%;
+  width: 70%;
 }
 
 .pullover {
-  width: 30%;
-  height: 60%;
+  width: 70%;
+}
+
+.t-shirt {
+  width: 70%;
 }
