@@ -95,3 +95,24 @@ footer {
   font-size: 20px;
   font-weight: bold;
 }
+
+.card.product1 {
+  width: 20%;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.product3 {
+  width: 30%;
+}
+
+.cap {
+  width: 30%;
+  height: 60%;
+}
+
+.pullover {
+  width: 30%;
+  height: 60%;
+}
