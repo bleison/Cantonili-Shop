@@ -11,6 +11,7 @@ body {
   background-color: var(--background-color);
   min-height: 100%;
   margin-bottom: 0;
+  overflow: scroll;
 }
 
 .container {
@@ -164,8 +165,12 @@ footer {
 .card-team1:hover,
 .card-team2:hover,
 .card-team3:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-   transform: scale(1.05);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.card-team3:hover {
+  content: url("/Bilder/Team/djordje-seitlich.JPG");
 }
 
 p {
