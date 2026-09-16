@@ -55,6 +55,8 @@ a {
   color: var(--font-color);
 }
 
+
+
 .card-product1,
 .card-product2,
 .card-product3 {
@@ -134,7 +136,7 @@ footer {
   text-align: center;
 }
 
-p {
+.price{
   color: rgb(0, 0, 0);
   font-weight: bolder;
   font-size: x-large;
@@ -162,6 +164,10 @@ p {
 
   .logo {
     height: 150px;
+  }
+
+  h2 {
+    font-size: 45px;
   }
   .card-grid {
     display: grid;
@@ -200,7 +206,7 @@ p {
 p {
   color: rgb(0, 0, 0);
   font-weight: bolder;
-  font-size: x-large;
+  font-size: 35px;
   font-family: cinzel;
 }
 
