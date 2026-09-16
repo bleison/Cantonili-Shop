@@ -61,7 +61,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba (0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border: 2px solid black;
   text-align: center;
   box-sizing: border-box;
@@ -93,16 +93,22 @@ a {
 
 .djoerdji {
   width: 70%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 360px;
 }
 
 .levin {
   width: 70%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 360px;
 }
 
 .lorin {
   width: 70%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 360px;
 }
 
@@ -123,7 +129,6 @@ main {
 footer {
   grid-area: footer;
   display: flex;
-  justify-content: center;
   justify-content: space-around;
   border: 1px solid black;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -140,25 +145,28 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "first-product"
-      "second-product"
-      "third-product";
+      "left-product"
+      "center-product"
+      "right-product";
     row-gap: 30px;
   }
 
   .card-team1 {
-    grid-area: first-product;
+    grid-area: left-product;
     transform: translateY(0%);
+    object-fit: cover;
   }
 
   .card-team2 {
-    grid-area: second-product;
+    grid-area: center-product;
     transform: translateY(0%);
+    object-fit: cover;
   }
 
   .card-team3 {
-    grid-area: third-product;
+    grid-area: right-product;
     transform: translateY(0%);
+    object-fit: cover;
   }
 }
 
@@ -169,7 +177,14 @@ footer {
   transform: scale(1.05);
 }
 
-.card-team3:hover {
+.card-team1:hover .levin {
+  content: url("/Bilder/Team/levin-seitlich.JPG");
+}
+.card-team2:hover .lorin {
+  content: url("/Bilder/Team/lorin-seitlich.JPG");
+}
+
+.card-team3:hover .djoerdji {
   content: url("/Bilder/Team/djordje-seitlich.JPG");
 }
 
