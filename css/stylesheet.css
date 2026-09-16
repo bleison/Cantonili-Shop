@@ -185,17 +185,15 @@ footer {
 
   .card-product1 {
     grid-area: first-product;
-    transform: translateY(0%);
   }
 
   .card-product2 {
     grid-area: second-product;
-    transform: translateY(0%);
   }
 
   .card-product3 {
     grid-area: third-product;
-    transform: translateY(0%);
+
   }
 }
 
@@ -226,10 +224,18 @@ p {
     display: grid;
     align-items: center;
     grid-template-columns: 100%;
-    grid-template-rows: 130px auto 25px;
+    grid-template-rows: 100px auto 25px;
   }
   .nav {
-    font-size: 70%;
+    font-size: 100%;
+  }
+
+    h2 {
+    font-size: 25px;
+  }
+
+  .price{
+    font-size: 20px;
   }
 }
 

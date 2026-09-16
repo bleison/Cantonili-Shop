@@ -9,19 +9,18 @@
 body {
   margin: 0;
   background-color: var(--background-color);
-  min-height: 100%;
   margin-bottom: 0;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 175px auto 25px;
+  grid-template-rows: 150px auto 25px;
   grid-template-areas:
-    "nav"
-    "main"
-    "footer";
+    "nav-team"
+    "main-team"
+    "footer-team";
   min-height: 100vh;
   row-gap: 20px;
 }
@@ -32,6 +31,7 @@ nav {
   border: 1px solid black;
   padding: 0;
   font-family: montserrat;
+  grid-area: nav-team;
 }
 
 .nav {
@@ -123,11 +123,11 @@ button {
 }
 
 main {
-  grid-area: main;
+  grid-area: main-team;
 }
 
 footer {
-  grid-area: footer;
+  grid-area: footer-team;
   display: flex;
   justify-content: space-around;
   border: 1px solid black;
@@ -137,37 +137,6 @@ footer {
   font-size: 20px;
   font-weight: bold;
   font-family: montserrat;
-}
-
-@media (max-width: 440px) {
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "left-product"
-      "center-product"
-      "right-product";
-    row-gap: 30px;
-  }
-
-  .card-team1 {
-    grid-area: left-product;
-    transform: translateY(0%);
-    object-fit: cover;
-  }
-
-  .card-team2 {
-    grid-area: center-product;
-    transform: translateY(0%);
-    object-fit: cover;
-  }
-
-  .card-team3 {
-    grid-area: right-product;
-    transform: translateY(0%);
-    object-fit: cover;
-  }
 }
 
 .card-team1:hover,
@@ -193,4 +162,40 @@ p {
   font-weight: bolder;
   font-size: x-large;
   font-family: cinzel;
+}
+
+
+@media (max-width: 1100px) {
+  body{
+    overflow: scroll;
+  }
+.card-grid {
+  margin: 20px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 25px;
+  grid-template-areas: 
+  "left-product" 
+  "center-product"
+  "right-product";
+}
+}
+
+@media (max-width: 440px){
+    .logo {
+  height: 100px;
+}
+
+  .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto 25px;
+  }
+  .nav {
+    font-size: 100%;
+  }
+
 }

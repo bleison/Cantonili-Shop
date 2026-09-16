@@ -11,22 +11,25 @@ body {
   background-color: var(--background-color);
   min-height: 100%;
   margin-bottom: 0;
+  overflow: hidden;
 }
 
 .container {
   display: grid;
+  align-items: center;
   grid-template-columns: 100%;
-  grid-template-rows: 175px auto 25px;
+  grid-template-rows: 150px auto 25px;
   grid-template-areas:
     "nav"
     "main"
     "footer";
   min-height: 100vh;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 
 nav {
   background-color: var(--nav-color);
+  height: 100%;
   grid-area: nav;
   border: 1px solid black;
   padding: 0;
@@ -52,9 +55,7 @@ a {
   color: var(--font-color);
 }
 
-.card-team1,
-.card-team2,
-.card-team3 {
+.card-product1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,39 +75,29 @@ a {
   gap: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 100%;
   grid-template-areas: "left-product center-product right-product";
 }
 
-.card-team1 {
+.card-product1 {
   grid-area: left-product;
 }
 
-.card-team2 {
-  grid-area: center-product;
-}
-
-.card-team3 {
-  grid-area: right-product;
-}
-
-.djoerdji {
+.cap {
   width: 70%;
-  border-radius: 360px;
 }
 
-.levin {
+.pullover {
   width: 70%;
-  border-radius: 360px;
 }
 
-.lorin {
+.t-shirt {
   width: 70%;
-  border-radius: 360px;
 }
 
 h2 {
   font-family: cinzel;
+  color: #d7d9ce;
 }
 
 button {
@@ -131,9 +122,46 @@ footer {
   font-size: 20px;
   font-weight: bold;
   font-family: montserrat;
+  text-align: center;
 }
 
-@media (max-width: 440px) {
+.price {
+color: #d7d9ce; 
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: cinzel;
+}
+
+@media (max-width: 1100px) {
+  body {
+    overflow: scroll;
+  }
+
+  .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px auto 25px;
+    grid-template-areas:
+      "nav"
+      "main"
+      "footer";
+    min-height: 100vh;
+    row-gap: 10px;
+  }
+
+  .logo {
+    height: 150px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  .price {
+    font-size: 40px;
+  }
+
   .card-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -145,25 +173,22 @@ footer {
     row-gap: 30px;
   }
 
-  .card-team1 {
+  .card-product1 {
     grid-area: first-product;
-    transform: translateY(0%);
   }
 
-  .card-team2 {
+  .card-product2 {
     grid-area: second-product;
-    transform: translateY(0%);
   }
 
-  .card-team3 {
+  .card-product3 {
     grid-area: third-product;
-    transform: translateY(0%);
   }
 }
 
-.card-team1:hover,
-.card-team2:hover,
-.card-team3:hover {
+.card-product1:hover,
+.card-product2:hover,
+.card-product3:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
 }
@@ -171,6 +196,45 @@ footer {
 p {
   color: rgb(0, 0, 0);
   font-weight: bolder;
-  font-size: x-large;
+  font-size: 35px;
   font-family: cinzel;
+}
+
+@media (max-width: 440px) {
+  body {
+    overflow: scroll;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto 25px;
+  }
+  .nav {
+    font-size: 100%;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+}
+
+.card-product1:hover,
+.card-product2:hover,
+.card-product3:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+h3 {
+  font-size: xx-large;
 }

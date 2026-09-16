@@ -1,11 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/stylesheet-warenkorb.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cantonili</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav">
+          <a href="/html/index.html"><img class="logo" src="/Bilder/cantonili-logo.webp" ></a>
+          <a href="/html/team.html">Team</a>
+          <a href="/html/warenkorb.html">Warenkorb</a>
+        </div>
+      </nav>
+
+      <main>
+        <form action="https://blj-ict-bz.ch/formlog/" method="post">
+            <fieldset>
+                <legend>Personalien</legend>
+                <label for="fname">Vorname:</label>
+                <input type="text" name="Vorname" placeholder="Vorname" required>
+                <label for="lname">Nachname:</label>
+                <input type="text" name="nachname" placeholder="Nachname" required>
+                <br>
+                <br>
+                <label for=""></label>
+                <label for="email">E-Mail:</label>
+                <input type="email" name="E-Mail" placeholder="Deine E-Mail" required>
+                <br>
+                <br>
+                <label for="street">Strasse:</label>
+                <input type="adress" name="Strasse" placeholder="Deine Strasse" required>
+                <br>
+                <br>
+                <label for="birthday">Geburtstag:</label>
+                <input type="date" name="birthday">
+                <br>
+                <br>
+                <label for="products">Pullover:</label>
+                <select name="pullover">
+                    <optgroup label="Farbe">
+                        <option value="Sand">Sand</option>
+                        <option value="Military Grenn">Military Green</option>
+                        <option value="Granat">Granat</option>
+                        <option value="Nein">Nein</option>
+                    </optgroup>
+                </select>
+                <label for="products">T-Shirt:</label>
+                <select name="t-shirt">
+                    <optgroup label="Farbe">
+                        <option value="Sand">Sand</option>
+                        <option value="Military Green">Military Green</option>
+                        <option value="Granat">Granat</option>
+                        <option value="Nein">Nein</option>
+                    </optgroup>
+                </select>
+            <label for="products">Caps:</label>
+            <select name="cap">
+                <optgroup label="Farbe">
+                    <option value="Vintage Sand">Sand</option>
+                    <option value="Vintage Stone">Stone</option>
+                    <option value="Vintage Olive">Olive</option>
+                    <option value="Nein">Nein</option>
+                </optgroup>
+            </select>
+            <br>
+            <br>
+                <input type="submit" value="Absenden">
+                
+            </form>
+      </main>
+      <footer>
+        <a href="/html/terms.html" target="_blank">terms & conditions</a>
+        <a href="/html/privacy.html" target="_blank">privacy policy</a>
+      </footer>
+    </div>
+  </body>
 </html>
